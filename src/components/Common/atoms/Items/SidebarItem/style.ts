@@ -39,8 +39,8 @@ export const SidebarItemWrapper = styled.div`
       props.title === '규정위반'
         ? 'none'
         : props.title === '학생정보'
-        ? 'none'
-        : 'flex'};
+          ? 'none'
+          : 'flex'};
     background: transparent;
   }
 `;

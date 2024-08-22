@@ -23,7 +23,7 @@ const NoticeBoard = () => {
                   <hr />
                   {`${i?.createdDate.slice(0, 4)}년 ${i?.createdDate.slice(
                     5,
-                    7
+                    7,
                   )}월`}
                   <hr />
                 </S.DateLine>

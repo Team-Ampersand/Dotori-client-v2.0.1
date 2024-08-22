@@ -40,9 +40,9 @@ const getStuInfoList: RestHandler<RestRequest> = rest.get(
           role: 'ROLE_COUNCILLOR',
           selfStudyStatus: 'APPLIED',
         },
-      ])
+      ]),
     );
-  }
+  },
 );
 
 export default getStuInfoList;

@@ -8,13 +8,13 @@ import useSWR from 'swr';
 
 const SelfstudyCheck = ({ role, memberId, checked }: CheckProps) => {
   const { mutate } = useSWR<selfstudyListProps[]>(
-    SelfstudyController.selfStudyRank(role)
+    SelfstudyController.selfStudyRank(role),
   );
 
   const studyChecks = async (
     role: string,
     memberId: number | undefined,
-    checked: boolean
+    checked: boolean,
   ) => {
     await selfStudyCheck(role, memberId, checked).then(() => mutate());
   };

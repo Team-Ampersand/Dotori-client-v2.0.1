@@ -9,12 +9,12 @@ import { isNotNull } from 'utils/isNotNull';
 
 const ChangePasswdForm = dynamic(
   () => import('../components/ChangePasswd/organisms/ChangePasswdForm'),
-  { ssr: false, loading: () => <DotoriLogo /> }
+  { ssr: false, loading: () => <DotoriLogo /> },
 );
 
 const PasswdEmailCheck = dynamic(
   () => import('../components/ChangePasswd/organisms/PasswdEmailCheck'),
-  { ssr: false, loading: () => <DotoriLogo /> }
+  { ssr: false, loading: () => <DotoriLogo /> },
 );
 
 const ChangePasswdPage = () => {

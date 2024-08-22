@@ -1,1 +1,1 @@
-export {signUpObject, signUpStep} from './recoilAtomContainer';
+export { signUpObject, signUpStep } from './recoilAtomContainer';

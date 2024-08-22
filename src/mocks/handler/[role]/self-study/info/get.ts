@@ -12,9 +12,9 @@ const getSelfStudyInfo: RestHandler<RestRequest> = rest.get(
         count: 38,
         limit: 50,
         selfStudyStatus: 'CAN',
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getSelfStudyInfo;

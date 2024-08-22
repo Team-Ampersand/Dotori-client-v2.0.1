@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 
 const SignInForm = dynamic(
   () => import('../components/SignIn/organisms/SignInForm'),
-  { ssr: false, loading: () => <DotoriLogo /> }
+  { ssr: false, loading: () => <DotoriLogo /> },
 );
 
 const SignInPage = () => {

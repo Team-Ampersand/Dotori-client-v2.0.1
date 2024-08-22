@@ -1,3 +1,1 @@
-export const dateRegex = (date:string) => (
-    date.replace(/(-0|-)/g,'. ')
-)
+export const dateRegex = (date: string) => date.replace(/(-0|-)/g, '. ');

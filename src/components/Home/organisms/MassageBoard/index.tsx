@@ -23,13 +23,14 @@ const MassageBoard = () => {
   const role = getRole();
   const [theme] = UseToggleTheme();
   const { data, mutate } = useSWR<applyPageProps>(
-    MassageController.massage(role)
-    );
+    MassageController.massage(role),
+  );
   const { data: myProfile } = useSWR<myProfileType>(MemberController.myProfile);
 
   useEffect(() => {
     if (role === 'admin') return setInfo({ applyStatus: '인원수정' });
-    else if (myProfile?.gender === 'WOMAN') return setInfo({ applyStatus: '신청불가' })
+    else if (myProfile?.gender === 'WOMAN')
+      return setInfo({ applyStatus: '신청불가' });
     switch (data?.massageStatus) {
       case 'CAN':
         return setInfo({ applyStatus: '안마의자' });
@@ -69,7 +70,7 @@ const MassageBoard = () => {
 
   const handleModalClick = (
     setState: Dispatch<SetStateAction<boolean>>,
-    n?: number
+    n?: number,
   ) => {
     setState(false);
     n ? clickApplyModify(n) : StudyControll();

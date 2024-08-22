@@ -7,7 +7,7 @@ export interface ApplicationItemProps {
   stuNum: string;
   listType: string;
   lastRank?: number;
-  profileImage: string | null
+  profileImage: string | null;
 }
 
 export interface NullApplicationItemProps {

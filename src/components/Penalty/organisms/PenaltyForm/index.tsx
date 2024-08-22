@@ -11,14 +11,14 @@ const PenaltyForm = () => {
 
   const handelPenaltySearch = async (
     state: (string | undefined)[],
-    name?: string
+    name?: string,
   ) => {
     const data = await selfPenaltySearch(
       role,
       name,
       state[0],
       state[1]?.slice(0, 1),
-      state[2]
+      state[2],
     );
     setPenaltyOBJ(data?.data.students);
   };

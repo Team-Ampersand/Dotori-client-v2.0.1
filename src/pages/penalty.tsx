@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       {
         headers: { Authorization },
         params: { memberName: '', stuNum: '' },
-      }
+      },
     );
 
     return {

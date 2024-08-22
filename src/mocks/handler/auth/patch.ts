@@ -14,9 +14,9 @@ const postRefreshToken: RestHandler<RestRequest> = rest.patch(
         accessToken: accessToken,
         refreshToken: refreshToken,
         expiresAt: 'yyyy-MM-ddTHH:mm:ss',
-      })
+      }),
     );
-  }
+  },
 );
 
 export default postRefreshToken;

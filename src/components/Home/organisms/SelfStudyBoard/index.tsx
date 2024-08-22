@@ -23,7 +23,7 @@ const SelfStudyBoard = () => {
   const role = getRole();
   const [theme] = UseToggleTheme();
   const { data, mutate } = useSWR<applyPageProps>(
-    SelfstudyController.selfStudyInfo(role)
+    SelfstudyController.selfStudyInfo(role),
   );
 
   useEffect(() => {
@@ -67,7 +67,7 @@ const SelfStudyBoard = () => {
 
   const handleModalClick = (
     setState: Dispatch<SetStateAction<boolean>>,
-    n?: number
+    n?: number,
   ) => {
     setState(false);
     n ? clickApplyModify(n) : StudyControll();

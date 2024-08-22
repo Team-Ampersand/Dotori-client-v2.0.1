@@ -16,7 +16,7 @@ export const signin = async (id: string, password: string) => {
       data.accessExp,
       data.refreshToken,
       data.refreshExp,
-      null
+      null,
     );
     return toast.success('로그인이 되었습니다.');
   } catch (e: any) {
@@ -34,7 +34,7 @@ export const signup = async (
   password: string,
   name: string,
   stuNum: number,
-  gender: string
+  gender: string,
 ) => {
   try {
     await apiClient.post(MemberController.signup, {
@@ -99,7 +99,7 @@ export const authCheck = async (emailCode: number) => {
 
 export const passwordChange = async (
   currentPassword: string,
-  newPassword: string
+  newPassword: string,
 ) => {
   try {
     await apiClient.patch(MemberController.changePasswd, {
@@ -117,7 +117,7 @@ export const passwordChange = async (
 
 export const authPasswordChange = async (
   newPassword: string,
-  email?: string
+  email?: string,
 ) => {
   try {
     await apiClient.patch(MemberController.authChangePasswd, {
@@ -135,7 +135,7 @@ export const authPasswordChange = async (
 
 export const tokenReissue = async (
   refreshToken: string,
-  ctx: GetServerSidePropsContext | null
+  ctx: GetServerSidePropsContext | null,
 ) => {
   let newAuthorization: string;
   try {
@@ -146,7 +146,7 @@ export const tokenReissue = async (
         headers: {
           'Refresh-Token': refreshToken,
         },
-      }
+      },
     );
     newAuthorization = data.accessToken;
     setCookie(ctx, 'Authorization', `Bearer ${newAuthorization}`, {
@@ -164,7 +164,7 @@ export const postProfileImage = async (image: Blob | string) => {
     const { data } = await apiClient.post(
       MemberController.profileImage,
       formData,
-      { headers: { 'Content-Type': 'multipart/form-data' } }
+      { headers: { 'Content-Type': 'multipart/form-data' } },
     );
     return { data };
   } catch (e: any) {}
@@ -177,7 +177,7 @@ export const patchProfileImage = async (image: Blob | string) => {
     const { data } = await apiClient.patch(
       MemberController.profileImage,
       formData,
-      { headers: { 'Content-Type': 'multipart/form-data' } }
+      { headers: { 'Content-Type': 'multipart/form-data' } },
     );
     return { data };
   } catch (e: any) {}

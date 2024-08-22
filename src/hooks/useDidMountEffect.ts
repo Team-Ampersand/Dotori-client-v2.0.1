@@ -2,7 +2,7 @@ import { useRef, useEffect, DependencyList } from 'react';
 
 export const useDidMountEffect = (
   func: { (): void; (): void },
-  deps: DependencyList | undefined
+  deps: DependencyList | undefined,
 ) => {
   const didMount = useRef(false);
   useEffect(() => {

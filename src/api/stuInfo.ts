@@ -15,7 +15,7 @@ export const getSearchStuInfo = async (
   classNum: string | null,
   grade: number | null,
   stuRole: 'ROLE_MEMBER' | 'ROLE_COUNCILLOR' | 'ROLE_DEVELOPER' | null,
-  selfStudyCheck: boolean | null
+  selfStudyCheck: boolean | null,
 ) => {
   try {
     const { data } = await apiClient.get(StuInfoController.searchStuInfo, {
@@ -37,7 +37,7 @@ export const putStuInfo = async (
   memberName: string,
   stuNum: string,
   gender: 'MAN' | 'WOMAN',
-  stuRole: 'ROLE_MEMBER' | 'ROLE_COUNCILLOR' | 'ROLE_DEVELOPER' | 'ROLE_ADMIN'
+  stuRole: 'ROLE_MEMBER' | 'ROLE_COUNCILLOR' | 'ROLE_DEVELOPER' | 'ROLE_ADMIN',
 ) => {
   try {
     await apiClient.put(StuInfoController.modifyStuInfo, {

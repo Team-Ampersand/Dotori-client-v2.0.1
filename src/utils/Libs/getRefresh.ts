@@ -15,7 +15,7 @@ export const getRefresh = async (config: AxiosRequestConfig) => {
   ) {
     const { newAuthorization }: any = await tokenReissue(
       RefreshToken || '',
-      null
+      null,
     );
     if (config.headers)
       config.headers['Authorization'] = `Bearer ${newAuthorization}`;

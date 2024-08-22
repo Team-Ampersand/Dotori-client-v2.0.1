@@ -74,7 +74,11 @@ const ApplicationItem = ({
         </>
       )}
       <S.Profile>
-        {profileImage ? <ProfileImage image={profileImage} /> : <DefaultProfile />}
+        {profileImage ? (
+          <ProfileImage image={profileImage} />
+        ) : (
+          <DefaultProfile />
+        )}
       </S.Profile>
       <S.StuInfo>
         <S.Name>

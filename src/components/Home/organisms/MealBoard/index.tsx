@@ -9,7 +9,7 @@ import { MealResponse, MealInfo } from 'types/Meal';
 const returnMealdata = async (
   datestr: string,
   setList: (list: string[]) => void,
-  setMealRes: (data: MealResponse) => void
+  setMealRes: (data: MealResponse) => void,
 ) => {
   const { data } = await axios.get(`/neis/meal/${datestr}`);
   try {
@@ -55,7 +55,7 @@ const MealBoard = () => {
   };
 
   const [date, setDate] = useState<{ datestr: string; day: number }>(
-    returnMealDate
+    returnMealDate,
   );
 
   useEffect(() => {
@@ -98,7 +98,7 @@ const MealBoard = () => {
           <span>
             {`${date.datestr.slice(0, 4)}.${date.datestr.slice(
               4,
-              6
+              6,
             )}.${date.datestr.slice(6)} (${week[date.day]})`}
           </span>
           <button onClick={() => nextPrevDay(+1)}>

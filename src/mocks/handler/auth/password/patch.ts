@@ -6,7 +6,7 @@ const postSignUp: RestHandler<RestRequest> = rest.post(
   mockApi(MemberController.authChangePasswd),
   (_req, res, ctx) => {
     return res(ctx.status(200));
-  }
+  },
 );
 
 export default postSignUp;

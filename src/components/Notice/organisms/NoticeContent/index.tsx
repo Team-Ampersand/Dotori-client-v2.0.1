@@ -15,7 +15,7 @@ const NoticeContent = () => {
   const role = getRole();
   const boardId = router.query.boardId ?? '';
   const { data } = useSWR<noticeDetailType>(
-    NoticeController.getNoticeDetail(role, boardId)
+    NoticeController.getNoticeDetail(role, boardId),
   );
   const setContent = useSetRecoilState(noticeContent);
 

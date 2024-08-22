@@ -23,9 +23,9 @@ const getRuleList: RestHandler<RestRequest> = rest.get(
             createdDate: '2023-01-01',
           },
         ],
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getRuleList;

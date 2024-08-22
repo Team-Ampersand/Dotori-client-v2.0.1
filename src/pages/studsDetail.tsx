@@ -50,7 +50,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       StuInfoController.stuInfo,
       {
         headers: { Authorization },
-      }
+      },
     );
     return {
       props: {

@@ -27,9 +27,9 @@ const getSongList: RestHandler<RestRequest> = rest.get(
             stuNum: '3106',
           },
         ],
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getSongList;

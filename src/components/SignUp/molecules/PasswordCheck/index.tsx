@@ -43,7 +43,7 @@ const PasswordCheck = () => {
       state.password,
       SignUpObject.name,
       SignUpObject.stuId,
-      SignUpObject.gender
+      SignUpObject.gender,
     );
     if (notError) {
       setSignUpStep('first');

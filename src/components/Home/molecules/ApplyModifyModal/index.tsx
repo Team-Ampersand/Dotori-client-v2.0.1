@@ -35,7 +35,7 @@ const ApplyModifyModal = ({
             placeholder={`${maxCount}`}
             DeleteBtnClick={() => resetField('num')}
             isValue={isNotNull(
-              watch('num').toString().replace(`${maxCount}`, '')
+              watch('num').toString().replace(`${maxCount}`, ''),
             )}
           />
         </div>

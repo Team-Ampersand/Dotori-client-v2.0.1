@@ -21,7 +21,7 @@ const MenuModal = ({
   )[] = ['프로필 수정', '규정위반 내역', '비밀번호 변경', '로그아웃'];
 
   const handleClick = (
-    name: '프로필 수정' | '규정위반 내역' | '비밀번호 변경' | '로그아웃'
+    name: '프로필 수정' | '규정위반 내역' | '비밀번호 변경' | '로그아웃',
   ) => {
     setIsClick(!isClick);
     switch (name) {

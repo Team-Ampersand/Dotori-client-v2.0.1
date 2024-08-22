@@ -50,12 +50,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   try {
     const { data: noticeData } = await apiClient.get(
       NoticeController.getNotice(role),
-      { headers: { Authorization } }
+      { headers: { Authorization } },
     );
 
     const { data: noticeDetailData } = await apiClient.get(
       NoticeController.getNoticeDetail(role, boardId),
-      { headers: { Authorization } }
+      { headers: { Authorization } },
     );
 
     return {

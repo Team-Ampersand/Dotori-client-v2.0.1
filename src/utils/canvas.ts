@@ -25,7 +25,7 @@ export function rotateSize(width: number, height: number, rotation: number) {
 export async function getCroppedImg(
   imageSrc: string,
   rotation: 0,
-  pixelCrop?: Area
+  pixelCrop?: Area,
 ) {
   const image = await createImage(imageSrc);
   const canvas = document.createElement('canvas');
@@ -39,7 +39,7 @@ export async function getCroppedImg(
   const { width: bBoxWidth, height: bBoxHeight } = rotateSize(
     image.width,
     image.height,
-    rotation
+    rotation,
   );
 
   canvas.width = bBoxWidth;
@@ -56,7 +56,7 @@ export async function getCroppedImg(
     pixelCrop.x,
     pixelCrop.y,
     pixelCrop.width,
-    pixelCrop.height
+    pixelCrop.height,
   );
 
   canvas.width = pixelCrop.width;
@@ -68,7 +68,9 @@ export async function getCroppedImg(
     canvas.toBlob((blob) => {
       if (blob) {
         const extension = blob.type.split('/')[1];
-        const file = new File([blob], `profile.${extension}`, { type: blob.type });
+        const file = new File([blob], `profile.${extension}`, {
+          type: blob.type,
+        });
         return resolve(file);
       } else reject(new Error('Canvas is empty'));
     });

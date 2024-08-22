@@ -16,19 +16,19 @@ const SelfStudyTable = () => {
   const [userList, setUserList] = useRecoilState(selfStudyList);
   const role = getRole();
   const { data } = useSWR<selfstudyListType>(
-    SelfstudyController.selfStudyRank(role)
+    SelfstudyController.selfStudyRank(role),
   );
 
   const handelSelfstudySearch = async (
     state: (string | undefined)[],
-    name?: string
+    name?: string,
   ) => {
     await selfStudySearch(
       role,
       name ? name : null,
       state[0] ? state[0] : null,
       state[1] ? state[1].slice(0, 1) : null,
-      state[2] ? state[2] : null
+      state[2] ? state[2] : null,
     ).then((res) => {
       setUserList(res?.data.list);
     });

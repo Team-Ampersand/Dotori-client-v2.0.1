@@ -13,7 +13,7 @@ export const postNotice = async (
   role: string,
   title: string,
   content: string,
-  img: File[]
+  img: File[],
 ) => {
   let formData = new FormData();
 
@@ -26,7 +26,7 @@ export const postNotice = async (
     'boardDto',
     new Blob([JSON.stringify(boardDto)], {
       type: 'application/json',
-    })
+    }),
   );
 
   if (img.length) img.map((item) => formData.append('files', item));
@@ -36,7 +36,7 @@ export const postNotice = async (
     const { data } = await apiClient.post(
       NoticeController.getNotice(role),
       formData,
-      { headers: { 'Content-Type': 'multipart/form-data' } }
+      { headers: { 'Content-Type': 'multipart/form-data' } },
     );
     toast.success('공지사항 작성이 완료되었습니다');
     return { data };
@@ -49,7 +49,7 @@ export const postNotice = async (
 export const deleteNotice = async (role: string, boardIdx: number) => {
   try {
     await apiClient.delete(
-      NoticeController.getNoticeDetail(role, String(boardIdx))
+      NoticeController.getNoticeDetail(role, String(boardIdx)),
     );
     toast.success('공지사항 삭제가 완료되었습니다');
     return;
@@ -60,7 +60,7 @@ export const putNotice = async (
   role: string,
   boardIdx: number,
   title: string,
-  content: string
+  content: string,
 ) => {
   try {
     await apiClient.put(
@@ -68,7 +68,7 @@ export const putNotice = async (
       {
         title: title,
         content: content,
-      }
+      },
     );
     toast.success('공지사항 수정이 완료되었습니다');
     return;

@@ -9,10 +9,10 @@ export const AuthInput = styled.div`
     props.isSearch
       ? '250px'
       : props.isRabel
-      ? `385px`
-      : props.isEmailAuth
-      ? `255px`
-      : `385px`};
+        ? `385px`
+        : props.isEmailAuth
+          ? `255px`
+          : `385px`};
   display: flex;
   align-items: center;
   border-radius: 8px;
@@ -33,7 +33,9 @@ export const AuthInput = styled.div`
     font-size: 16px;
     border: none;
     border-radius: 8px;
-    transition: border, color 0.3s ease-in-out;
+    transition:
+      border,
+      color 0.3s ease-in-out;
     padding: 0 0 0
       ${(props: AuthInputStyleProps) => (props.isRabel ? `50px` : `20px`)};
     :-webkit-autofill {
@@ -72,8 +74,8 @@ export const AuthInput = styled.div`
         props.isRabel
           ? `calc(90vw - 100px)`
           : props.isEmailAuth
-          ? `50vw`
-          : `calc(90vw - 40px)`};
+            ? `50vw`
+            : `calc(90vw - 40px)`};
       margin: 0 auto;
     }
   }
@@ -95,6 +97,6 @@ export const EmailBack = styled.span`
         ? '110px'
         : '48px'
       : props.isValue || props.isFocus
-      ? '80px'
-      : '20px'};
+        ? '80px'
+        : '20px'};
 `;

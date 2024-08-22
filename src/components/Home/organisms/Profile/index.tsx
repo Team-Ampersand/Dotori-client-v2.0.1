@@ -27,7 +27,11 @@ const Profile = () => {
     <S.ProfileWrapper>
       <DarkModeButton />
       <S.ProfileBox>
-        {data?.profileImage? <S.ProfileImage image={data?.profileImage}/> : <DefaultProfile />}
+        {data?.profileImage ? (
+          <S.ProfileImage image={data?.profileImage} />
+        ) : (
+          <DefaultProfile />
+        )}
         <S.StudentInfo>
           <S.Name>{`반가워요, ${data?.name ?? ''}님`}</S.Name>
           <S.StudId>{data?.stuNum ?? ''}</S.StudId>
