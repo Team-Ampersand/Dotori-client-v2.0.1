@@ -16,8 +16,8 @@ export const ModalOverayWrapper = styled.div`
   background: hsla(235, 77%, 10%, 0.45);
 
   @media (max-width: 950px) {
-    background: hsla(235, 77%, 10%, 0.70);
-	}
+    background: hsla(235, 77%, 10%, 0.7);
+  }
 `;
 
 export const ResponseOverayWrapper = styled.div`

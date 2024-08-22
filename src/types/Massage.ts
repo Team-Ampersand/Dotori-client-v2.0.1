@@ -4,7 +4,7 @@ export interface massageRankProps {
   stuNum: string;
   memberName: string;
   gender: 'MALE' | 'FEMALE';
-  profileImage: string | null
+  profileImage: string | null;
 }
 
 export interface massageListType {

@@ -47,7 +47,7 @@ const EditModal = ({
       watch('memberName'),
       watch('stuNum'),
       watch('gender'),
-      watch('role')
+      watch('role'),
     );
     if (!isFailure) return;
 

@@ -23,9 +23,9 @@ const getBoardDetail: RestHandler<RestRequest> = rest.get(
         ],
         createdDate: '2023-03-13T23:03:30.599004',
         modifiedDate: null,
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getBoardDetail;

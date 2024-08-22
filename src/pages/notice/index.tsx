@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   try {
     const { data: noticeData } = await apiClient.get(
       SelfstudyController.selfStudyInfo(role),
-      { headers: { Authorization } }
+      { headers: { Authorization } },
     );
 
     return {

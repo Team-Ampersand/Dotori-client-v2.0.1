@@ -26,7 +26,7 @@ import dynamic from 'next/dynamic';
 
 const TimeBoard = dynamic(
   () => import('../components/Home/organisms/TimeBoard'),
-  { ssr: false }
+  { ssr: false },
 );
 
 const HomePage: NextPage<{

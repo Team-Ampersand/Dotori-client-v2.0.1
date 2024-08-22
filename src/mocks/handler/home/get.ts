@@ -12,9 +12,9 @@ const getUserInfo: RestHandler<RestRequest> = rest.get(
         stuNum: 1234,
         name: '개발섭유저',
         gender: 'MAN',
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getUserInfo;

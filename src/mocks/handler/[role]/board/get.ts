@@ -32,9 +32,9 @@ const getBoard: RestHandler<RestRequest> = rest.get(
             createdDate: '2023-03-10T05:35:43.520161',
           },
         ],
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getBoard;

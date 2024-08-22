@@ -19,7 +19,7 @@ const SongList = () => {
   }`;
   const { data, mutate } = useSWR<SongListType>(
     SongController.music(role),
-    () => getMusic(role, postDate)
+    () => getMusic(role, postDate),
   );
 
   useEffect(() => {

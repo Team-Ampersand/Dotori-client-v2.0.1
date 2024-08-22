@@ -149,14 +149,14 @@ export const ApplyBtn = styled.div`
     props.applyStatus === '신청취소'
       ? `${Palette.NEUTRAL_N30}`
       : props.applyStatus === '신청불가' && props.theme === 'dark'
-      ? `${Palette.NEUTRAL_N20}`
-      : `white`};
+        ? `${Palette.NEUTRAL_N20}`
+        : `white`};
   background: ${(props: applyStyleProps) =>
     props.applyStatus === '신청취소'
       ? ``
       : props.applyStatus === '신청불가'
-      ? `${Palette.PRIMARY_P30}`
-      : `${Palette.PRIMARY_P10}`};
+        ? `${Palette.PRIMARY_P30}`
+        : `${Palette.PRIMARY_P10}`};
   border: 1px solid
     ${(props: applyStyleProps) =>
       props.applyStatus === '신청취소' ? `${Palette.NEUTRAL_N30}` : `none`};

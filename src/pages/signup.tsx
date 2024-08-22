@@ -6,7 +6,7 @@ import React from 'react';
 
 const SignUpForm = dynamic(
   () => import('../components/SignUp/organisms/SignUpForm'),
-  { ssr: false }
+  { ssr: false },
 );
 
 const SignUpPage = () => {

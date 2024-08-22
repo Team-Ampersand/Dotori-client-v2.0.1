@@ -34,14 +34,14 @@ const ProfileImgModal = () => {
   const { data, mutate } = useSWR<myProfileType>(
     MemberController.myProfile,
     async () => await apiClient.get(MemberController.myProfile),
-    { keepPreviousData: true }
+    { keepPreviousData: true },
   );
 
   const onCropComplete = useCallback(
     (croppedArea: Area, croppedAreaPixels: Area) => {
       setCroppedAreaPixels(croppedAreaPixels);
     },
-    []
+    [],
   );
 
   useEffect(() => {
@@ -54,12 +54,12 @@ const ProfileImgModal = () => {
       if (data?.profileImage) {
         const data = await patchProfileImage(croppedImage ?? '');
         setProfileImgModal(false);
-        if( !data ) return toast.error('프로필 이미지 수정을 실패했습니다');
+        if (!data) return toast.error('프로필 이미지 수정을 실패했습니다');
         toast.success('프로필 이미지를 수정했습니다');
       } else {
         const data = await postProfileImage(croppedImage ?? '');
         setProfileImgModal(false);
-        if( !data ) return toast.error('프로필 이미지 추가를 실패했습니다');
+        if (!data) return toast.error('프로필 이미지 추가를 실패했습니다');
         data && toast.success('프로필 이미지를 추가했습니다');
       }
 

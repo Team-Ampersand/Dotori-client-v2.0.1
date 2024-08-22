@@ -61,7 +61,7 @@ export interface PenaltyRecordModalProps {
   handleDelete: (
     state: string[],
     setState: (state: string[]) => void,
-    select: string
+    select: string,
   ) => void;
 }
 

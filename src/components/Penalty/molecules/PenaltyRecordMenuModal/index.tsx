@@ -25,7 +25,7 @@ const PenaltyRecordMenuModal = ({
   const handleSelect = (
     state: string[],
     setState: (stae: string[]) => void,
-    select: string
+    select: string,
   ) => {
     if (!state.includes(select)) {
       setState([...state.filter((i) => i !== ''), select]);
@@ -51,7 +51,7 @@ const PenaltyRecordMenuModal = ({
             <S.SelectBox2>
               {currentMenu &&
                 PenaltyMenuData.filter(
-                  (i) => i.penaltyTitle == currentMenu
+                  (i) => i.penaltyTitle == currentMenu,
                 )[0].menuList.map((i, idx) => (
                   <S.MenuList
                     key={idx}
@@ -60,7 +60,7 @@ const PenaltyRecordMenuModal = ({
                       handleSelect(
                         penaltySelect,
                         setPenaltySelect,
-                        returnPenaltyValuesEnglish[i]
+                        returnPenaltyValuesEnglish[i],
                       );
                     }}
                     isClick={currentItem === i}

@@ -5,7 +5,7 @@ export const middleware = async (req: NextRequest) => {
   const ua = userAgent(req);
   const RefreshToken = req.cookies.get('RefreshToken');
   const isAuthPage = ['/signin', '/signup', '/'].some(
-    (i) => i == req.nextUrl.pathname
+    (i) => i == req.nextUrl.pathname,
   );
 
   if (RefreshToken && isAuthPage) {

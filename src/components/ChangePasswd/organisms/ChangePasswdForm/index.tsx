@@ -30,8 +30,8 @@ const ChangePasswdForm = ({ isLogin }: { isLogin: boolean }) => {
       isNotNull(
         watch('newPassword') &&
           watch('newPasswordCheck') &&
-          (watch('password') || !isLogin)
-      )
+          (watch('password') || !isLogin),
+      ),
     );
   }, [watch(['password', 'newPassword', 'newPasswordCheck'])]);
 
@@ -40,7 +40,7 @@ const ChangePasswdForm = ({ isLogin }: { isLogin: boolean }) => {
       (data.password || data.newPassword || data.newPasswordCheck) &&
         (data.password?.message ||
           data.newPassword?.message ||
-          data.newPasswordCheck?.message)
+          data.newPasswordCheck?.message),
     );
   };
 
@@ -49,14 +49,14 @@ const ChangePasswdForm = ({ isLogin }: { isLogin: boolean }) => {
       return toast.error('비밀번호확인이 현재 비밀번호와 똑같습니다.');
     else if (state.newPassword !== state.newPasswordCheck)
       return toast.error(
-        '새로운 비밀번호확인이 새로운 비밀번호와 맞지 않습니다.'
+        '새로운 비밀번호확인이 새로운 비밀번호와 맞지 않습니다.',
       );
     if (
       isLogin
         ? await passwordChange(state.password ?? '', state.newPassword ?? '')
         : await authPasswordChange(
             state.newPassword ?? '',
-            IsemailPasswordCheck.authEmail + '@gsm.hs.kr'
+            IsemailPasswordCheck.authEmail + '@gsm.hs.kr',
           )
     ) {
       setIsemailPasswordCheck({ authEmail: '', isAuth: false });

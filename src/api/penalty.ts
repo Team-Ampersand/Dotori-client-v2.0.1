@@ -6,7 +6,7 @@ import { penaltyController } from 'utils/Libs/requestUrls';
 export const getPenaltyList = async (
   role: string,
   memberName: string,
-  stuNum: string
+  stuNum: string,
 ) => {
   try {
     const { data } = await apiClient.get(penaltyController.strRule(role), {
@@ -19,7 +19,7 @@ export const getPenaltyList = async (
 export const getPenaltyRule = async (role: string, stuNum: string) => {
   try {
     const { data }: AxiosResponse<PenaltyRuleItemType> = await apiClient.get(
-      penaltyController.studentRule(role, stuNum)
+      penaltyController.studentRule(role, stuNum),
     );
     return { data };
   } catch (e) {}
@@ -29,7 +29,7 @@ export const recordPenalty = async (
   role: string,
   stuNum: string[],
   rule: string[],
-  date: string
+  date: string,
 ) => {
   try {
     await apiClient.post(penaltyController.strRule(role), {
@@ -52,7 +52,7 @@ export const selfPenaltySearch = async (
   name?: string,
   grade?: string,
   classNum?: string,
-  gender?: string
+  gender?: string,
 ) => {
   try {
     const { data } = await apiClient.get(penaltyController.strRule(role), {

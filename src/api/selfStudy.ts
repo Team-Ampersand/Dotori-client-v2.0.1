@@ -46,7 +46,7 @@ export const selfStudySearch = async (
   name: string | null,
   grade: string | null,
   classNum: string | null,
-  gender: string | null
+  gender: string | null,
 ) => {
   try {
     const { data } = await apiClient.get(
@@ -58,7 +58,7 @@ export const selfStudySearch = async (
           classNum: classNum,
           gender: gender,
         },
-      }
+      },
     );
     return { data };
   } catch (e: any) {}
@@ -67,14 +67,14 @@ export const selfStudySearch = async (
 export const selfStudyCheck = async (
   role: string,
   memberId: number | undefined,
-  check: boolean
+  check: boolean,
 ) => {
   try {
     const { data } = await apiClient.patch(
       SelfstudyController.selfStudyCheck(role, memberId),
       {
         selfStudyCheck: check,
-      }
+      },
     );
     return { data };
   } catch (e: any) {}

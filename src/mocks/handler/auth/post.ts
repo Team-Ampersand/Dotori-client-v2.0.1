@@ -16,9 +16,9 @@ const postLogin: RestHandler<RestRequest> = rest.post(
         accessToken: accessToken,
         refreshToken: refreshToken,
         expiresAt: 'yyyy-MM-ddTHH:mm:ss',
-      })
+      }),
     );
-  }
+  },
 );
 
 export default postLogin;

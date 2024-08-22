@@ -6,7 +6,7 @@ export const setToken = (
   AuthorizationExp: string,
   RefreshToken: string,
   RefreshTokenExp: string,
-  ctx: GetServerSidePropsContext | null
+  ctx: GetServerSidePropsContext | null,
 ): void => {
   const authExpires = new Date(AuthorizationExp);
   const refreshExpires = new Date(RefreshTokenExp);

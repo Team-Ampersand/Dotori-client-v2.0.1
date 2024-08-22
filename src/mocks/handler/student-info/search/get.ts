@@ -44,9 +44,9 @@ const getSearchStuInfo: RestHandler<RestRequest> = rest.get(
           role: 'ROLE_COUNCILLOR',
           selfStudyStatus: 'APPLIED',
         },
-      ])
+      ]),
     );
-  }
+  },
 );
 
 export default getSearchStuInfo;

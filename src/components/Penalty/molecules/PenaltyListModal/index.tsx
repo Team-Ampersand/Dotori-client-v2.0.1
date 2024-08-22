@@ -11,7 +11,7 @@ import { returnPenaltyValuesKorean } from 'assets/data/PenaltyValuesData';
 
 const PenaltyListModal = () => {
   const [penaltyListModal, setPenaltyListModal] = useRecoilState(
-    penaltyListModalState
+    penaltyListModalState,
   );
   const ruleList = useRecoilState(penaltyRuleList);
 

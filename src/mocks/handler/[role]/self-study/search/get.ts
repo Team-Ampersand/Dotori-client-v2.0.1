@@ -35,9 +35,9 @@ const getSelfStudyRank: RestHandler<RestRequest> = rest.get(
             selfStudyCheck: false,
           },
         ],
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getSelfStudyRank;

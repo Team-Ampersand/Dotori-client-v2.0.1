@@ -25,9 +25,9 @@ const getPenaltyList: RestHandler<RestRequest> = rest.get(
             rule: [],
           },
         ],
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getPenaltyList;

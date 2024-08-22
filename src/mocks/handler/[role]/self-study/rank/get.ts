@@ -35,9 +35,9 @@ const getSelfStudySearch: RestHandler<RestRequest> = rest.get(
             selfStudyCheck: false,
           },
         ],
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getSelfStudySearch;

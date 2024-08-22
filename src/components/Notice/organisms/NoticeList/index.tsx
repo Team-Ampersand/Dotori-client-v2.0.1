@@ -30,7 +30,7 @@ const NoticeList = () => {
       <S.NoticeContainer>
         {boardList &&
           [...boardList].map((item, key) => (
-              <div key={item.id}>
+            <div key={item.id}>
               {boardList[key - 1]?.createdDate.slice(0, 7) >
                 boardList[key]?.createdDate.slice(0, 7) && (
                 <S.DateLine>
@@ -57,8 +57,8 @@ const NoticeList = () => {
                   }
                   id={item.id}
                 />
-                </div>
-                </div>
+              </div>
+            </div>
           ))}
       </S.NoticeContainer>
     </S.Layer>

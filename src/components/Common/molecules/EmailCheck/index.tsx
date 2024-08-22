@@ -26,7 +26,7 @@ const EmailCheck = ({ isLogin }: { isLogin: boolean }) => {
   useEffect(() => {
     setIsCheck(isNotNull(watch('email') && watch('certiNum') && !isAuth));
     setIsAuthEmailCheck(
-      isNotNull(watch('email')?.replace('@gsm.hs.kr', '') && isAuth)
+      isNotNull(watch('email')?.replace('@gsm.hs.kr', '') && isAuth),
     );
   }, [watch(['email', 'certiNum'])]);
 
@@ -49,7 +49,7 @@ const EmailCheck = ({ isLogin }: { isLogin: boolean }) => {
     toast.error(
       (!isNotNull(watch('email')) && '이메일을 입력해주세요.') ||
         state.email?.message ||
-        state.certiNum?.message
+        state.certiNum?.message,
     );
   };
 

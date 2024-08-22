@@ -12,9 +12,9 @@ const getMassageInfo: RestHandler<RestRequest> = rest.get(
         count: 2,
         limit: 5,
         selfStudyStatus: 'CAN',
-      })
+      }),
     );
-  }
+  },
 );
 
 export default getMassageInfo;

@@ -1,10 +1,6 @@
 import { cancelSelfStudyBan, selfStudyBan } from 'api/selfStudy';
 import { RoleData } from 'assets/data/RoleData';
-import {
-  BookIcon,
-  CircleDefaultProfile,
-  EditPencilIcon
-} from 'assets/svg';
+import { BookIcon, CircleDefaultProfile, EditPencilIcon } from 'assets/svg';
 import BookBenIcon from 'assets/svg/BookBenIcon';
 import CommonCheckModal from 'components/Common/molecules/CommonCheckModal';
 import EditModal from 'components/StuInfo/organisms/EditModal';
@@ -44,7 +40,7 @@ const StuInfoItem = ({ data: stuInfoData }: Props) => {
 
     setTitle(`자습 금지${isClear}`);
     setContent(
-      `${stuInfoData.memberName} 학생을 자습 금지${isClear}하겠습니까?`
+      `${stuInfoData.memberName} 학생을 자습 금지${isClear}하겠습니까?`,
     );
     setCheckModal(true);
   };

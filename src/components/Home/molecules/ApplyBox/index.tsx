@@ -53,8 +53,8 @@ const ApplyBox = ({
                 Math.floor(maxCount / 2) >= count
                   ? `${Palette.SUB_GREEN}`
                   : Math.floor(maxCount * (6.5 / 8)) > count
-                  ? `${Palette.SUB_YELLOW}`
-                  : `${Palette.SUB_RED}`,
+                    ? `${Palette.SUB_YELLOW}`
+                    : `${Palette.SUB_RED}`,
             }}
           />
           <S.NotApplyLine

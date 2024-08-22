@@ -27,7 +27,7 @@ const PenaltyRecordModal = () => {
   const [penaltySelect, setPenaltySelect] = useRecoilState(penaltySelected);
   const [penaltyRecordInfoModal, setPenaltyRecordInfoModal] = useState(false);
   const [penaltyRecordModal, setPenaltyRecordModal] = useRecoilState(
-    penaltyRecordModalState
+    penaltyRecordModalState,
   );
   const [date] = useRecoilState(selectedDate);
   const [calendarModal, setCalenderModal] = useRecoilState(calendarModalState);
@@ -37,7 +37,7 @@ const PenaltyRecordModal = () => {
   const handleDelete = (
     state: string[],
     setState: (state: string[]) => void,
-    select: string
+    select: string,
   ) => {
     setState([...state.filter((i) => i !== select)]);
   };
@@ -51,7 +51,7 @@ const PenaltyRecordModal = () => {
       role,
       penaltyStu.map((i) => i.stuNum),
       penaltySelect,
-      `${year}-${month}-${day}`
+      `${year}-${month}-${day}`,
     ).then(() => {
       setPenaltyRecordModal(false);
       setPenaltySelect([]);

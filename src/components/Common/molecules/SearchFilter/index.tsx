@@ -15,7 +15,7 @@ import * as S from './style';
 const SearchFilter = ({ filterType, onSubmit }: SearchFilterTypeProps) => {
   const [theme] = UseToggleTheme();
   const [filterState, setFilterState] = useState<(string | undefined)[]>(
-    Array.from({ length: 5 }, () => undefined)
+    Array.from({ length: 5 }, () => undefined),
   );
   const [modalState, setModalState] = useRecoilState(filterModal);
   const setLookUp = useSetRecoilState(selfStudyLookup);
@@ -41,8 +41,8 @@ const SearchFilter = ({ filterType, onSubmit }: SearchFilterTypeProps) => {
     value === '남자'
       ? (value = 'MAN')
       : value === '여자'
-      ? (value = 'WOMAN')
-      : '';
+        ? (value = 'WOMAN')
+        : '';
     const copy = [...filterState];
     copy[idx] = filterState[idx] === value ? undefined : value;
     setFilterState(copy);

@@ -6,7 +6,7 @@ import React from 'react';
 
 const PromotionOrganisms = dynamic(
   () => import('../components/Promotion/organisms/PromotionOrganisms'),
-  { ssr: false }
+  { ssr: false },
 );
 
 const PromotionPage = () => {

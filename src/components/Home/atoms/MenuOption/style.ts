@@ -24,8 +24,8 @@ export const MenuOptionWrapper = styled.div`
     props.name === '프로필 수정'
       ? '16px 16px 0 0'
       : props.name === '비밀번호 변경'
-      ? '0 0 16px 16px'
-      : ''};
+        ? '0 0 16px 16px'
+        : ''};
 
   :hover {
     transition: all 0.3s ease-in-out;
